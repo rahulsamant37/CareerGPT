@@ -16,10 +16,11 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { Id } from "@/convex/_generated/dataModel";
 import { toast } from "sonner";
 
 interface DeleteConversationButtonProps {
-  jobId: string;
+  jobId: Id<"jobs">;
   userId: string | null;
 }
 

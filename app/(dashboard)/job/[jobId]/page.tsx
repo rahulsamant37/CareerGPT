@@ -1,8 +1,17 @@
 import React from "react";
 import JobResizablePanel from "../_components/JobResizablePanel";
+import { id } from "@/convex/_generated/dataModel";
 
-async function Page({ params }: any) {
-  const { jobId } = await params;
+interface JobPageProps {
+  params: {
+    jobId: string;
+  }
+}
+
+export default function JobPage({ params }: JobPageProps) {
+  // Convert the URL jobId parameter to a Convex ID
+  const jobId = id("jobs", params.jobId);
+  
   return (
     <div
       className="flex-1 bg-white justify-between flex
@@ -15,5 +24,3 @@ async function Page({ params }: any) {
     </div>
   );
 }
-
-export default Page;
