@@ -217,14 +217,14 @@ export default function Home() {
               {
                 icon: PenToolIcon,
                 title: 'Resume Tailoring',
-                description: 'Receive personalized suggestions to optimize your resume for specific job applications and stand out from other candidates.',
+                description: "Receive personalized suggestions to optimize your resume for specific job applications and stand out from other candidates.",
                 colorClass: 'bg-purple-500/10',
                 iconClass: 'text-purple-500'
               },
               {
                 icon: LightbulbIcon,
                 title: 'Interview Preparation',
-                description: 'Prepare for interviews with AI-generated questions and suggested answers based on the job description and your experience.',
+                description: "Prepare for interviews with AI-generated questions and suggested answers based on the job description and your experience.",
                 colorClass: 'bg-amber-500/10',
                 iconClass: 'text-amber-500'
               }
