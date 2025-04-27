@@ -210,7 +210,7 @@ export default function Home() {
               {
                 icon: BriefcaseIcon,
                 title: 'Job Analysis',
-                description: 'Get detailed insights about job requirements, responsibilities, and qualifications to understand if it's the right fit for you.',
+                description: 'Get detailed insights about job requirements, responsibilities, and qualifications to understand if it is the right fit for you.',
                 colorClass: 'bg-primary/10',
                 iconClass: 'text-primary'
               },

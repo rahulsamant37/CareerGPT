@@ -59,7 +59,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 @layer base {
-  @layer base {
     :root {
       --background: 0 0% 100%;
       --foreground: 240 10% 3.9%;
@@ -130,7 +129,6 @@ body {
       --sidebar-border: 217.2 32.6% 17.5%;
       --sidebar-ring: 346.8 77.2% 49.8%;
     }
-  }
 }
 
 @layer base {
