@@ -34,13 +34,11 @@ const JobInsightSuggest = ({ isDisabled, setInput, onSubmit }: PropsType) => {
   };
   return (
     <div
-      className="relative
-   w-full mb-1.5
-    "
+      className="relative w-full mb-1.5"
     >
       <div
         className="flex gap-2 overflow-x-auto
-        scrollbar-hide px-8 pl-0
+        scrollbar pb-2 pl-0
         "
       >
         {prompts?.map((prompt, index) => (
@@ -50,7 +48,11 @@ const JobInsightSuggest = ({ isDisabled, setInput, onSubmit }: PropsType) => {
             size="sm"
             disabled={isDisabled}
             className="whitespace-nowrap rounded-full
-                font-normal !text-[12.5px] hover:bg-gray-50
+                font-normal !text-[12.5px]
+                hover:bg-gray-50 dark:hover:bg-gray-800
+                border-gray-200 dark:border-gray-700
+                text-gray-700 dark:text-gray-300
+                transition-colors
                 "
             onClick={() => handlePromptClick(prompt)}
           >

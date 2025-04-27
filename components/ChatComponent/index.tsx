@@ -16,13 +16,12 @@ const ChatComponent = (props: PropsType) => {
     api.jobInsightConversation.getMessagesByJobId,
     jobId ? { id: jobId } : "skip"
   );
-  console.log(data, jobId, "data");
   return (
     <div
-      className="relative h-full bg-white
-  flex divide-y divide-gray-200 flex-col
-  justify-between gap-2
-  "
+      className="relative h-full bg-background
+      flex divide-y divide-gray-200 dark:divide-gray-800 flex-col
+      justify-between gap-2 rounded-lg shadow-sm
+      "
     >
       <div className="flex flex-1 justify-between gap-2">
         <ChatMessages userName={userName} data={data} />

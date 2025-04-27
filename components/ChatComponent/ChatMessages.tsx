@@ -31,9 +31,10 @@ const ChatMessages = (props: PropType) => {
   return (
     <div
       className="
-  flex max-h-[calc(100vh-10.5rem)] flex-1
-  flex-col gap-4 p-3 overflow-y-auto pt-8 pb-20
-    "
+      flex max-h-[calc(100vh-10.5rem)] flex-1
+      flex-col gap-4 p-3 overflow-y-auto pt-8 pb-20
+      scrollbar
+      "
     >
       {/* {Messages } */}
       {messages && messages?.length > 0 ? (
@@ -68,9 +69,9 @@ const ChatMessages = (props: PropType) => {
                     {!isUserMessage && (
                       <Avatar className="w-8 h-8">
                         <AvatarFallback
-                          className="shrink-0 bg-gray-200
-                        text-sm
-                        "
+                          className="shrink-0 bg-primary/20 text-primary
+                          text-sm
+                          "
                         >
                           AI
                         </AvatarFallback>
@@ -78,9 +79,9 @@ const ChatMessages = (props: PropType) => {
                     )}
 
                     <div
-                      className={cn("px-4 py-2 rounded-lg inline-block", {
-                        "bg-black/80 text-white": isUserMessage,
-                        "bg-gray-50 text-gray-900": !isUserMessage,
+                      className={cn("px-4 py-2 rounded-lg inline-block shadow-sm", {
+                        "bg-primary text-white": isUserMessage,
+                        "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100": !isUserMessage,
                       })}
                     >
                       <div
@@ -93,7 +94,7 @@ const ChatMessages = (props: PropType) => {
                       <Avatar className="w-8 h-8">
                         <AvatarFallback
                           className="shrink-0
-                         bg-black/80 text-white text-sm"
+                         bg-gray-800 text-white text-sm"
                         >
                           {userName?.charAt(0) || "U"}
                         </AvatarFallback>
@@ -107,15 +108,17 @@ const ChatMessages = (props: PropType) => {
         </>
       ) : (
         <div
-          className="flex flex-col items-center 
-      justify-center gap-2"
+          className="flex flex-col items-center
+          justify-center gap-3 p-6 bg-gray-50 dark:bg-gray-800/30 rounded-lg mx-auto max-w-md"
         >
-          <MessageSquareTextIcon className="w-8 h-8" />
-          <h3 className="font-semibold text-lg">
+          <div className="p-3 bg-primary/10 rounded-full">
+            <MessageSquareTextIcon className="w-8 h-8 text-primary" />
+          </div>
+          <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-100">
             Your Job Insight Assistant is Ready!
           </h3>
-          <p className="text-gray-500 tex-sm">
-            Get tailored advice and insight to ace job search
+          <p className="text-gray-500 dark:text-gray-400 text-sm text-center">
+            Get tailored advice and insight to ace your job search. Ask questions about the job description, requirements, or how to prepare.
           </p>
         </div>
       )}
