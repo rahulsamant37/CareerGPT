@@ -43,7 +43,7 @@ const SidebarFooterContent = ({
     <div className="flex flex-col gap-3">
       {isSignedIn && (
         <div
-          className="bg-gradient-to-r from-purple-600
+          className="bg-gradient-to-r from-red-600
         to-primary rounded-lg p-4"
         >
           <h3 className="text-white font-semibold text-sm mb-1">

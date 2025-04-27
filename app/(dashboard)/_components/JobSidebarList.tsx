@@ -69,7 +69,7 @@ const JobSidebarList = (props: { userId: string }) => {
                 >
                   <Link href={jobPageUrl} className="text-white">
                     <MessageSquareTextIcon className="w-4 h-4" />
-                    <div className="flex flex-col">
+                    <div className="flex flex-col h-3">
                       <span className="font-medium">{item.jobTitle}</span>
                       <div className="flex items-center gap-1 text-xs text-white/60">
                         <CalendarIcon className="w-3 h-3" />
