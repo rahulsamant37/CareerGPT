@@ -1,16 +1,9 @@
 import React from "react";
 import JobResizablePanel from "../_components/JobResizablePanel";
-import { id } from "@/convex/_generated/dataModel";
 
-interface JobPageProps {
-  params: {
-    jobId: string;
-  }
-}
-
-export default function JobPage({ params }: JobPageProps) {
-  // Convert the URL jobId parameter to a Convex ID
-  const jobId = id("jobs", params.jobId);
+export default function JobPage({ params }) {
+  // Use the jobId directly as a string
+  const jobId = params.jobId;
   
   return (
     <div
