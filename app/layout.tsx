@@ -7,6 +7,7 @@ import { Toaster } from "sonner";
 import { ConvexClientProvider } from "@/context/ConvexClientProvider";
 import { Suspense } from "react";
 import FallbackLoader from "@/components/FallbackLoader";
+import { ThemeProvider } from "next-themes";
 
 const onest = Onest({ subsets: ["latin"] });
 
@@ -22,17 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
-          className={`bg-white ${onest.className}`}
+          className={`${onest.className}`}
           suppressHydrationWarning
         >
-          <ConvexClientProvider>
-            <Suspense fallback={<FallbackLoader />}>
-              <NuqsAdapter>{children}</NuqsAdapter>
-            </Suspense>
-            <Toaster />
-          </ConvexClientProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ConvexClientProvider>
+              <Suspense fallback={<FallbackLoader />}>
+                <NuqsAdapter>{children}</NuqsAdapter>
+              </Suspense>
+              <Toaster />
+            </ConvexClientProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
