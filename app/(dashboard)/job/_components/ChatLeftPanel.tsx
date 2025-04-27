@@ -36,7 +36,7 @@ const ChatLeftPanel = (props: { jobId: string }) => {
         </div>
       </div>
 
-      <div className="border-b border-gray-200 dark:border-gray-800 py-2 px-4 bg-gray-50 dark:bg-gray-900/50 flex justify-between items-center">
+      <div className="border-b border-gray-200 dark:border-gray-800 py-2 px-4 bg-gray-50 dark:bg-gray-900 flex justify-between items-center">
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Ask questions about the job description, requirements, or how to prepare
         </p>
@@ -46,7 +46,7 @@ const ChatLeftPanel = (props: { jobId: string }) => {
         )}
       </div>
 
-      <div className="flex-1 overflow-hidden p-2">
+      <div className="flex-1 overflow-hidden p-2 dark:bg-gray-900">
         <ChatComponent
           {...{
             jobId,

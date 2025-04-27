@@ -22,7 +22,7 @@ const JobResizablePanel = (props: { jobId: string }) => {
       </ResizablePanel>
 
       <ResizableHandle withHandle />
-      <ResizablePanel defaultSize={isMobile ? 25 : 45} className={"pt-2"}>
+      <ResizablePanel defaultSize={isMobile ? 25 : 45} className={"pt-2 dark:bg-gray-900"}>
         {/* {jOB Details} */}
         <RightSidePanel jobId={props.jobId} />
       </ResizablePanel>
