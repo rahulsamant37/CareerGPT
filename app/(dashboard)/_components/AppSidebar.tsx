@@ -35,29 +35,33 @@ const AppSidebar = () => {
 
   return (
     <>
-      <Sidebar className="!bg-[rgb(33,33,33)] px-2">
+      <Sidebar className="bg-sidebar px-2">
         <SidebarHeader
           className="flex flex-row w-full items-center
                     justify-between m-[4px_0px_0px]
                     "
         >
-          <Link href="/" className="text-white text-xl">
-            Job<b className="text-primary">Assistant</b>.ai
+          <Link href="/" className="text-white text-xl flex items-center gap-2">
+            <div className="bg-primary rounded-md p-1 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">JA</span>
+            </div>
+            <span>Job<b className="text-primary">Assistant</b>.ai</span>
           </Link>
-          <SidebarTrigger className="!text-white !p-0 !bg-gray-800" />
+          <SidebarTrigger className="!text-white !p-0 !bg-gray-800 hover:!bg-gray-700" />
         </SidebarHeader>
         <SidebarContent className="overflow-hidden">
           <SidebarGroup>
             <SidebarGroupContent>
-              <Link href="/">
+              <Link href="/" className="w-full">
                 <Button
                   variant="outline"
-                  className="w-full 
-            !bg-transparent !text-white
-            border-[rgba(255,255,255,.2)]
-            mt-3 !h-10 !rounded-lg !font-medium text-sm
-            hover:!bg-gray-700 transition-colors
-            "
+                  className="w-full
+                  !bg-primary/10 !text-white
+                  border-primary/30
+                  mt-3 !h-10 !rounded-lg !font-medium text-sm
+                  hover:!bg-primary/20 transition-colors
+                  shadow-sm
+                  "
                 >
                   <PlusIcon className="w-4 h-4" />
                   <span>New Job</span>
