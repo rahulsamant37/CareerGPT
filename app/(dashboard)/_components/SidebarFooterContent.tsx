@@ -72,16 +72,17 @@ const SidebarFooterContent = ({
             <div
               role="button"
               className="
-            flex items-center gap-3 p-2 rounded-lg
-      hover:bg-[rgba(255,255,255,0.05)]
-      transition-colors
-            "
+                flex items-center gap-3 p-2 rounded-lg
+                hover:bg-gray-700/20
+                transition-colors
+              "
             >
               <Avatar className="h-8 w-8">
                 <AvatarFallback
                   className="
-                bg-gray-800 border text-primary-foreground
-                "
+                  bg-primary/20 text-primary
+                  border border-primary/30
+                  "
                 >
                   {userInitial}
                 </AvatarFallback>
@@ -96,8 +97,8 @@ const SidebarFooterContent = ({
             side="top"
             align="end"
             className="
-                  w-64 px-4 pt-5 pb-2 bg-[rgb(40,40,40)]
-             !text-white border-gray-600
+                  w-64 px-4 pt-5 pb-2 bg-background border-border
+                  text-foreground
                   "
           >
             <div className="space-y-2">
