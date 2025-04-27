@@ -64,7 +64,7 @@ AI Job Insight Assistant is a powerful SaaS platform that leverages artificial i
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ai-job-insight-assistant.git
+git clone https://github.com/rahulsamant37/ResumeGPT.git
 cd ai-job-insight-assistant
 ```
 
@@ -100,7 +100,7 @@ yarn dev
 
 The application is optimized for deployment on Vercel. Simply connect your repository to Vercel and deploy.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/ai-job-insight-assistant)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/rahulsamant37/ResumeGPT)
 
 ## 🤝 Contributing
 
@@ -118,8 +118,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Support
 
-For support, email support@aijobinsight.com or join our Discord community.
+For support, email rahulsamant.com or join our Discord community.
 
 ---
 
-Built with ❤️ by [Your Name/Company]
+Built with ❤️ by Rahul Samant
