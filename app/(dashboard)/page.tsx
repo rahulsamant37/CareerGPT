@@ -259,7 +259,7 @@ export default function Home() {
                 role: "Software Engineer"
               },
               {
-                quote: "I was struggling with tailoring my resume for each application. This tool saved me hours and improved my response rate by 70%.",
+                quote: "I was struggling with tailoring my resume for each application. This tool saved me hours and improved my response rate by 70 percent.",
                 author: "Michael T.",
                 role: "Marketing Manager"
               },
