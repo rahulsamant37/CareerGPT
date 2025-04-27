@@ -5,7 +5,7 @@ import {
   AutosizeTextAreaRef,
 } from "@/components/ui/autosize-textarea";
 import { Button } from "@/components/ui/button";
-import { Loader, SendIcon } from "lucide-react";
+import { Loader, SendIcon, BriefcaseIcon, InfoIcon } from "lucide-react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useRouter } from "next/navigation";
@@ -69,18 +69,28 @@ const JobInfoForm = () => {
   return (
     <div
       className="pt-3 mb-3 z-10 mx-auto
-  w-full max-w-2xl
-    "
+      w-full max-w-2xl
+      "
     >
       <div
         className="flex flex-col border-[0.5px]
-          border-zine-300 mx-2 md:mx-0 items-stretch
+          border-zinc-300 dark:border-zinc-700 mx-2 md:mx-0 items-stretch
           transition-all duration-200
-          relative shadow-md
-          rounded-2xl bg-white
+          relative shadow-lg
+          rounded-2xl bg-white dark:bg-gray-900
           "
       >
-        <div className="flex flex-col gap-3.5 m-3.5">
+        <div className="flex items-center gap-2 px-4 pt-4 pb-2">
+          <BriefcaseIcon className="w-5 h-5 text-primary" />
+          <h3 className="font-medium text-gray-700 dark:text-gray-200">New Job Analysis</h3>
+        </div>
+
+        <div className="flex flex-col gap-3.5 px-4 pb-2">
+          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-2 text-xs text-gray-600 dark:text-gray-300 flex items-start gap-2">
+            <InfoIcon className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+            <p>Paste a job description to get AI-powered insights, interview tips, and personalized advice.</p>
+          </div>
+
           <AutosizeTextarea
             ref={textareaRef}
             rows={3}
@@ -93,28 +103,38 @@ const JobInfoForm = () => {
                 handleSubmit(e);
               }
             }}
-            placeholder="Paste Job title & description"
-            className="resize-none pr-12 text-base !border-0
-                      font-normal !shadow-none !ring-0
-                      focus-visible:!ring-offset-0
-                      focus-visible:!ring-0
+            placeholder="Paste job title & description here..."
+            className="resize-none pr-12 text-base border border-gray-200 dark:border-gray-700
+                      font-normal shadow-sm rounded-lg
+                      focus-visible:ring-primary
+                      dark:bg-gray-800 dark:text-gray-100
                       "
           />
         </div>
         <div
           className="flex w-full items-center
-              justify-end px-5 py-2
+              justify-between px-4 py-3 border-t border-gray-100 dark:border-gray-800
               "
         >
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            {jobDescription.length > 0 ? `${jobDescription.length} characters` : "Enter job details to continue"}
+          </p>
+
           <Button
-            size="icon"
             onClick={handleSubmit}
             disabled={isSubmitting || !jobDescription?.trim()}
+            className="gap-2"
           >
             {isSubmitting ? (
-              <Loader className="w-4 h-4 animate-spin" />
+              <>
+                <Loader className="w-4 h-4 animate-spin" />
+                <span>Processing...</span>
+              </>
             ) : (
-              <SendIcon />
+              <>
+                <span>Analyze Job</span>
+                <SendIcon className="w-4 h-4" />
+              </>
             )}
           </Button>
         </div>
