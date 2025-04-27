@@ -43,9 +43,9 @@ const AppSidebar = () => {
         >
           <Link href="/" className="text-white text-xl flex items-center gap-2">
             <div className="bg-primary rounded-md p-1 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">JA</span>
+              <span className="text-white font-bold text-sm">RS</span>
             </div>
-            <span>Job<b className="text-primary">Assistant</b>.ai</span>
+            <span>Rahul<b className="text-primary">Samant</b>.ai</span>
           </Link>
           <SidebarTrigger className="!text-white !p-0 !bg-gray-800 hover:!bg-gray-700" />
         </SidebarHeader>
